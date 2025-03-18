@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // ตรวจสอบว่า username และ password ไม่ว่าง
     if (empty($username) || empty($password)) {
-        echo "กรุณากรอกชื่อผู้ใช้และรหัสผ่าน!";
+        echo "Please enter your username and password!";
         exit;
     }
 
@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $xml->xpath($query);
 
     if ($result) {
-        echo "เข้าสู่ระบบสำเร็จ!";
+        echo "Login successful!";
     } else {
-        echo "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!";
+        echo "Username or password is incorrect!";
     }
 }
 ?>

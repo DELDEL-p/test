@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $xml->xpath($query);
 
     if ($result) {
-        echo "เข้าสู่ระบบสำเร็จ!";
+        echo "Login successful!";
     } else {
-        echo "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!";
+        echo "Username or password is incorrect!";
     }
 }
 ?>
